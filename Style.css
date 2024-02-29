@@ -1,0 +1,94 @@
+body {
+    background-color: orange;
+}
+
+.navbar {
+    width: 300px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: rgb(49, 49, 49);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar a:hover {
+    background-color: rgb(122, 199, 243);
+}
+
+.navbar li {
+    font-family: Verdana;
+    font-size: large;
+    position: relative; 
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    background-color: rgb(49, 49, 49);
+}
+
+.navbar li:hover .submenu {
+    display: block; 
+    width: 250px;
+}
+
+.submenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.submenu a:hover {
+    background-color: rgb(122, 199, 243);
+}
+
+.submenu .sub-nav {
+    padding: 10px; 
+}
+
+.submenu .sub-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu .sub-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px; 
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.submenu .sub-nav a:hover {
+    background-color: rgb(122, 199, 243);
+}
+
+.submenu .sub-nav:nth-child(2) {
+    display: none;
+}
+
+.submenu:hover .sub-nav:nth-child(2) {
+    display: block;
+}
