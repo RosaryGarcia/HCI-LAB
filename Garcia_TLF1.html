@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garcia_TLF1</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: gray;
+    }
+
+    .traffic-signal {
+      width: 100px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .light {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 10px;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="traffic-signal">
+    <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+  </div>
+  
+  <script>
+    const lights = document.querySelectorAll('.light');
+    let defaultIndex = 0;
+
+    function changeLight() {
+      lights[defaultIndex].style.backgroundColor = 'black';
+      defaultIndex = (defaultIndex + 1) % lights.length;
+      lights[defaultIndex].style.backgroundColor = ['red', 'yellow', 'green'][defaultIndex]; 
+    }
+
+    function startTrafficLight() {
+      setInterval(changeLight, Math.floor(Math.random() * 3000) + 6000); 
+    }
+
+    startTrafficLight(); 
+  </script>
+
+</body>
+</html>
